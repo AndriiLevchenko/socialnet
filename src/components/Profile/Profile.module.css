@@ -1,0 +1,9 @@
+ img{
+  width: 600px;
+  height: 60px;
+  border-radius: 6px;
+}
+.card_img{
+	color: red;
+	  border-radius: 6px;
+}

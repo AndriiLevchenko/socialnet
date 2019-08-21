@@ -1,0 +1,13 @@
+.cardImg{
+	padding: 23px;
+}
+.item{
+	color: brown;
+}
+.item img{
+	width: 80px;
+}
+.selectedPage{
+	font-size: 24px;
+	color: red;
+}

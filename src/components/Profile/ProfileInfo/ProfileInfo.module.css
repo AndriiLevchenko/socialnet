@@ -1,0 +1,14 @@
+ 
+.card_img{
+	width: 109px;
+	color: red;
+	margin: 11px;
+}
+.page_img{
+	width: 150px;
+	margin: 10px;
+}
+img{
+	max-width: 130px;
+	padding: 2px;
+}

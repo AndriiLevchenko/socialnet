@@ -1,0 +1,12 @@
+.cardImg{
+	padding: 23px;
+}
+.item{
+	color: brown;
+}
+.item img{
+	width: 80px;
+	height: 46px;
+	border: 1px solid transparent;
+	border-radius: 7px;
+}
