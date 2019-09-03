@@ -4,11 +4,9 @@ import * as axios from 'axios';
 import {reduxForm, Field} from 'redux-form';
 
  const  LoginForm =(props)=>{
- 		
  		return(
 			<div>
-				<h1> LOGIN </h1>
-		 		<form onSubmit={props.handleSubmit}>
+		 		<form    onSubmit={props.handleSubmit}   >
 		 			<div>
 		 				<Field placeholder ={'Логин'} name ={'Login'} component={'input'} />
 		 			</div>
@@ -27,20 +25,20 @@ import {reduxForm, Field} from 'redux-form';
 		)
 }	
 
-const LoginReduxForm =reduxForm({
-	form: 'login'
-})(LoginForm);
+const LoginReduxForm =reduxForm({ form: 'login' })(LoginForm);
 
 
 
 const  Login =(props)=>{
+	
 		const onSubmit =(formData)=>{
 			console.log(formData);
 		}
+	
  		return(
 			<div>
 				<h1> Login </h1>
-		 		<LoginReduxForm onSubmit={onSubmit} />
+		 		<LoginReduxForm onSubmit = {onSubmit} />
 			</div>
 		)
 }	

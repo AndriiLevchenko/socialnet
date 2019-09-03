@@ -32,14 +32,9 @@ const Dialogs =(props)=>{
 	let messagesElements=state.messages.map( m => <Message message={m.message} key={m.id} />);
 	let newMessageBody=state.newMessageBody;
 
-	let onSendMessageClick =()=>{
-		props.sendMessage();
-	}
-
-	let onNewMessageChange =(e)=>{
-		let body = e.target.value;
-		props.updateNewMessageBody(body);
-	}
+let addNewMessage =(values)=>{
+	props.sendMessage(values.newMessageBody);
+}
 
 
 	if(!props.isAuth) return <Redirect to={'/login'}  />
@@ -50,18 +45,15 @@ const Dialogs =(props)=>{
 			<div className={s.dialogsItems}>
 				<h4> Dialogs </h4>
 				{dialogsElements}
-				
 			</div>
 			<div className={s.messages}>
 				<h4> Messages </h4>
 				<div> {messagesElements} </div>
 				<div>
 					<div> 
-						<AddMessageForm />
+						<AddMessageForm onSubmit = {addNewMessage} />
 					</div>
-					<div>
-						{false && <button onClick={onSendMessageClick} >Send</button>}
-					</div>
+				
 				</div>
 
 			

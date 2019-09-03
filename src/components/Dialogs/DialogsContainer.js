@@ -1,5 +1,5 @@
 import Dialogs from './Dialogs';
-import {sendMessageCreator, updateNewMessageBodyCreator} from './../../redux/dialogsReducer';
+import {sendMessageCreator} from './../../redux/dialogsReducer';
 import {connect} from 'react-redux';
 import {withAuthRedirect} from './../../hoc/withAuthRedirect';
 import {compose} from 'redux';
@@ -7,7 +7,6 @@ import {compose} from 'redux';
 
 
 let mapStateToProps =(state)=>{
-	console.log(state.auth.isAuth);
 	return {
 		dialogsPage: state.dialogsPage
 		//isAuth: state.auth.isAuth
@@ -21,9 +20,9 @@ let mapStateToProps =(state)=>{
 // }
 
 let mapDispatchToProps =(dispatch)=>{
+		console.log('запускается mapDispatchToProps');
 	return {
-		updateNewMessageBody: (body)=>dispatch(updateNewMessageBodyCreator(body)),
-		sendMessage: (body)=>dispatch(sendMessageCreator(body))
+		sendMessage: (newMessageBody)=>dispatch(sendMessageCreator(newMessageBody))
 	}
 }
 
